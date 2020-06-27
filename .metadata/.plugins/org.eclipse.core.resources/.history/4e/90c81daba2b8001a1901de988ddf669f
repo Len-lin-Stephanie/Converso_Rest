@@ -1,0 +1,30 @@
+package rest;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+
+@Path("/conversor")
+public class Conversor {
+	
+	@GET
+	@Produces("text/plain")
+	public String conversor(@QueryParam("metrica") String medida, @QueryParam("value") float valor){
+		String resultado = "algo errado";
+		System.out.print("está no método");
+		System.out.print("Medida = " + medida);
+		if(medida == "km") {
+			System.out.print("entrou na condição");
+			float ml = valor * (float) 0.62137;
+			resultado = "Ml: " + ml;
+		}else if(medida == "ml") {
+			float km = valor / (float) 0.62137;
+			resultado = "Km: " + km;
+		}
+		return resultado;
+		
+		
+	}
+	
+}

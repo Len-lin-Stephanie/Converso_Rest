@@ -1,0 +1,27 @@
+package rest;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+
+@Path("/conversor")
+public class Conversor {
+	public static float KmToMl = .62137f;
+	@GET
+	@Produces("text/plain")
+	public String conversor(@QueryParam("metrica") String medida, @QueryParam("value") float valor){
+		System.out.println("Medida = " + medida);
+		if(medida == "km") {
+			float ml = valor * (float) KmToMl;
+			resultado = "Ml: " + ml;
+		}else if(medida == "ml") {
+			float km = valor / (float) KmToMl;
+			resultado = "Km: " + km;
+		}
+		return resultado;
+		
+		
+	}
+	
+}

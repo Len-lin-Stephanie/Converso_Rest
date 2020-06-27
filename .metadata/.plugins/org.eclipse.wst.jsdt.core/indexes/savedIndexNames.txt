@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+/home/coal/Faculdade/6ºPeriodo/Frameworks de Desenvolvimento Web/REST/ConversorRest2AVinganca/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2526880296.index
+589600257.index
+4105279210.index
+2386558107.index
+1548399884.index
+648303454.index
